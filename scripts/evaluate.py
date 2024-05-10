@@ -60,7 +60,7 @@ def main(config: DictConfig):
     # Execute pipeline
     data = loader.load()
     datasets = splitter.split(data)
-    transformer.fit(pd.concat([datasets["train"]]))
+    transformer.fit(pd.concat([datasets["train"], datasets["validate"]]))
     test_data = transformer.transform(datasets["test"])
 
     # Create RL environment
