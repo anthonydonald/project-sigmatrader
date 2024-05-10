@@ -1,0 +1,4 @@
+_target_: sigmatrader.marketenv.rewardwrapper.TimeAdjRewardWrapper
+kwargs:
+  days_start: 14
+  days_end: 44

@@ -1,0 +1,5 @@
+_target_: sigmatrader.marketenv.rewardwrapper.WeightedTradeTermReward2
+kwargs:
+  days_start: 14
+  days_end: 44
+  time_weight: 0.5

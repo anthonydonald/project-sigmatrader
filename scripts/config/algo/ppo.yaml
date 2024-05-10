@@ -1,0 +1,3 @@
+_target_: stable_baselines3.ppo.PPO
+policy: "MlpPolicy"
+verbose: 1

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sigmatrader"
+version = "0.0.1"
+authors = [
+    {name = "Anthony Donald", email = "ant.donald@gmail.com"},
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "binance_connector",
+    "gymnasium",
+    "hydra-core",
+    "matplotlib",
+    "numpy",
+    "notebook",
+    "optuna",
+    "pandas",
+    "plotly",
+    "python-dotenv",
+    "python_binance",
+    "seaborn",
+    "stable_baselines3[extra]",
+    "sb3-contrib",
+    "ta",
+    "tensorboard",
+    "wandb"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+
+[tool.mypy]
+python_version="3.11"
+

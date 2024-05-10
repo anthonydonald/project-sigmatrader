@@ -1,0 +1,35 @@
+defaults:
+  - _self_
+  - algo: a2c
+
+symbol: ???
+modelfile: null
+runid: recurrent-ppo-lstm
+
+wrappers: []
+
+n_eval_episodes: 10
+deterministic: True
+
+loader:
+  symbol: ${symbol}
+  start_date: ${eval:"datetime(2019, 9, 1)"}
+  end_date: ${eval:"datetime(2024, 3, 31)"}
+  interval: 1d
+
+splitter:
+  train: 0.8
+  validation: 0.1
+  test: 0.1
+
+env:
+  env_id: MarketEnv-v0
+  normalise: True
+  kwargs:
+    window_size: 10
+    starting_cash: 1000
+    trading_fee: 0
+    time_skip: 0
+    render_mode: null
+
+wandb: null

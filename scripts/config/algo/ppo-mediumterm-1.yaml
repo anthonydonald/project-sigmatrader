@@ -1,0 +1,16 @@
+_target_: stable_baselines3.ppo.PPO
+policy: "MlpPolicy"
+verbose: 1
+learning_rate: 0.008174348171339321
+n_steps: 1024
+batch_size: 64
+n_epochs: 10
+gamma: 0.9
+gae_lambda: 0.8
+clip_range: 0.4
+ent_coef: 3.274961906901247e-08
+vf_coef: 0.30139877403506554
+max_grad_norm: 2
+# policy_kwargs:
+#   net_arch: tiny
+# activation_fn: tanh

@@ -1,0 +1,52 @@
+defaults:
+  - _self_
+  - algo: ppo-weightedmediumterm
+  - reward_wrapper: weighted_trade_term
+
+wrappers: []
+
+symbol: ???
+runid: ???
+
+loader:
+  symbol: ${symbol}
+  start_date: ${eval:"datetime(2019, 9, 1)"}
+  end_date: ${eval:"datetime(2024, 3, 31)"}
+  interval: 1d
+
+splitter:
+  train: 0.8
+  validation: 0.1
+  test: 0.1
+
+env:
+  env_id: MarketEnv-v0
+  normalise: True
+  kwargs:
+    window_size: 10
+    starting_cash: 1000
+    trading_fee: 0.001
+    time_skip: 0
+    target_min_term: 0
+    render_mode: null
+
+eval:
+  n_eval_episodes: 5
+  deterministic: True
+  eval_freq: 1
+
+total_timesteps: 200_000
+n_envs: 6
+deterministic: False
+seeds: [3272516626, 2362068495, 546191995, 2766705503, 1257839729]
+
+skip_learn: False
+progress_bar: True
+
+model:
+  save: True
+
+wandb:
+  project: "sigmatrader"
+  sync_tensorboard: True
+  save_code: True

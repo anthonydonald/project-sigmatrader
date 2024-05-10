@@ -1,0 +1,3 @@
+_target_: stable_baselines3.dqn.DQN
+policy: MlpPolicy
+verbose: 1

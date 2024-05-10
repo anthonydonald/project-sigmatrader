@@ -1,0 +1,7 @@
+-r requirements.txt
+mypy
+black
+pip-tools
+pylint
+pytest
+isort

@@ -1,0 +1,12 @@
+_target_: stable_baselines3.a2c.A2C
+policy: "MlpPolicy"
+verbose: 1
+# gamma: 0.9221184018228173
+# max_grad_norm: 1.3316567513047413
+# n_steps: 7
+# # policy_kwargs:
+# #   lr_schedule: [0.18421338315814711]
+# #   activation_fn: relu
+# gamma: 0.9387888102337126
+# max_grad_norm: 1.3912642071141956
+# steps: 4
