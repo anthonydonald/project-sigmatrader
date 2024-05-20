@@ -17,6 +17,7 @@ source venv/bin/activate
 3. Install:
 
 ```
+pip install -r requirements.txt
 pip install -e .
 ```
 
